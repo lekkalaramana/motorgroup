@@ -1,0 +1,35 @@
+<form ng-app="myApp" ng-controller="myCtrl">
+    <div>
+        <label>Model Name:</label>
+        <input type="text" id="mname" placeholder="Enter Model Name" ng-model="model_name">
+    </div>
+    <div>
+        <label>Model Code:</label>
+        <input type="text" id="mcode" placeholder="Enter Model Code" ng-model="model_code">
+    </div>
+    <div>
+        <label>Manufacturer:</label>
+        <input type="text" id="manufacturer" placeholder="Enter Manufacturer" ng-model="manufacturer">
+    </div>
+    <div>
+        <label>With Battery:</label>
+        <select ng-model="with_battery">
+    	<option></option>
+      	<option value="1">Yes</option>
+  		<option value="2">No</option>
+    	</select>
+    </div>
+    <div>
+        <label>With Tools:</label>
+        <select ng-model="with_tools">
+    	<option></option>
+      	<option value="1">Yes</option>
+  		<option value="2">No</option>
+    	</select>
+    </div>
+    <div>
+        <label>Fuel Capacity:</label>
+        <input type="number" id="fuel_capacity" ng-model="fuel_capacity" min="3" max="20">
+    </div>
+    <button type="submit" class="btn" ng-click="add()">Save</button>
+</form>
