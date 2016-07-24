@@ -21,6 +21,12 @@
         </div>
       </div>
     </div>
+    <div class="menu">
+      <ul>
+        <li><%= link_to "Create", vehicle_new_path , :class => "" %></li>
+        <li><%= link_to "Orders", vehicle_orders_path , :class => "" %></li>
+      </ul>
+    </div>
     <%= yield %>
     </div>
   </body>

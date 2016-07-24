@@ -1,6 +1,8 @@
 Motorgroup::Application.routes.draw do
   get "vehicle/show"
   match "vehicle/create"=> "vehicle#create", via: :post
+  get "vehicle/orders"
+  get "vehicle/new"
   get "sessions/create"
   get "sessions/destroy"
   get "home/show"
