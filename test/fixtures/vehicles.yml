@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  model_name: MyString
+  model_code: MyString
+  manfacturer: MyString
+  with_battery: false
+  with_tools: false
+  fuel_capacity: 1
+
+two:
+  type: 
+  model_name: MyString
+  model_code: MyString
+  manfacturer: MyString
+  with_battery: false
+  with_tools: false
+  fuel_capacity: 1
