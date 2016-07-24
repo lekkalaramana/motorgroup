@@ -1,9 +1,10 @@
 class VehicleController < ApplicationController
   def show
-  	@vehical_details = Vehical.all
+  	@vehical_details = Scooter.all
   end
 
   def create
+    binding.pry
   end
 
   def new
