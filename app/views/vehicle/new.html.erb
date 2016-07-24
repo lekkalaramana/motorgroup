@@ -6,43 +6,50 @@
         <form ng-app="myApp" ng-controller="myCtrl">
             <div class="form-group">
                 <label>Vehicle Type:</label>
-                <select  class="form-control" ng-model="type">
+                <select  class="form-control" ng-model="vehicle.type">
                     <option>Please select</option>
                     <option value="Scooter">Scooter</option>
                     <option value="Bike">Bike</option>
                 </select>
+                 <span ng-show="errorVehicleType">{{errorVehicleType}}</span>
             </div>
             <div class="form-group">
                 <label>Model Name:</label>
-                <input type="text" id="mname" placeholder="Enter Model Name" class="form-control" ng-model="model_name">
+                <input type="text" id="mname" placeholder="Enter Model Name" class="form-control" ng-model="vehicle.model_name">
+                <span ng-show="errorModelName">{{errorModelName}}</span>
              </div>
              <div class="form-group">
                 <label>Model Code:</label>
-                <input type="text" id="mcode" placeholder="Enter Model Code" class="form-control" ng-model="model_code">
+                <input type="text" id="mcode" placeholder="Enter Model Code" class="form-control" ng-model="vehicle.model_code">
+                <span ng-show="errorModelCode">{{errorModelCode}}</span>
             </div>
             <div class="form-group">
                 <label>Manufacturer:</label>
-                <input type="text" id="manufacturer" class="form-control" placeholder="Enter Manufacturer" ng-model="manufacturer">
+                <input type="text" id="manufacturer" class="form-control" placeholder="Enter Manufacturer" ng-model="vehicle.manfacturer">
+                <span ng-show="errorManufacturer">{{errorManufacturer}}</span>
             </div>
             <div class="form-group">
                 <label>With Battery:</label>
-                <select ng-model="with_battery" class="form-control">
+                <select ng-model="vehicle.with_battery" class="form-control">
                 <option>Please select</option>
                 <option value="1">Yes</option>
                 <option value="2">No</option>
                 </select>
+                <span ng-show="errorWithBattery">{{errorWithBattery}}</span>
             </div>
             <div class="form-group">
                 <label>With Tools:</label>
-                <select ng-model="with_tools" class="form-control">
+                <select ng-model="vehicle.with_tools" class="form-control">
                 <option>Please select</option>
                 <option value="1">Yes</option>
                 <option value="2">No</option>
                 </select>
+                <span ng-show="errorWithTools">{{errorWithTools}}</span>
             </div>
             <div class="form-group" class="form-control">
                 <label>Fuel Capacity:</label>
-                <input type="number" id="fuel_capacity" class="form-control" ng-model="fuel_capacity" min="3" max="20">
+                <input type="number" id="fuel_capacity" class="form-control" ng-model="vehicle.fuel_capacity" min="3" max="20">
+                <span ng-show="errorFuelCapacity">{{errorFuelCapacity}}</span>
             </div>
             <button type="submit" class="btn btn-primary" ng-click="add()">Submit</button>
             </form>
